@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 
+import chalk from "chalk";
+import figlet from "figlet";
 import { Command } from "commander";
+
 import { addTask } from "./commands/add";
 import { listTasks } from "./commands/list";
 import { completeTask } from "./commands/complete";
 import { deleteTask } from "./commands/delete";
 import { deleteAllTasks } from "./commands/deleteAll";
-import chalk from "chalk";
-import figlet from "figlet";
 
 const program = new Command();
 

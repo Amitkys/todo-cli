@@ -4,14 +4,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const chalk_1 = __importDefault(require("chalk"));
+const figlet_1 = __importDefault(require("figlet"));
 const commander_1 = require("commander");
 const add_1 = require("./commands/add");
 const list_1 = require("./commands/list");
 const complete_1 = require("./commands/complete");
 const delete_1 = require("./commands/delete");
 const deleteAll_1 = require("./commands/deleteAll");
-const chalk_1 = __importDefault(require("chalk"));
-const figlet_1 = __importDefault(require("figlet"));
 const program = new commander_1.Command();
 // Show ASCII art only when no command is provided
 if (process.argv.length < 3) {
