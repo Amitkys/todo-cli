@@ -1,14 +1,22 @@
 {
-  "name": "todo",
+  "name": "@amitkys/todo-cli",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "dev": "tsc -b && node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "dist/index.js",
+  "bin": {
+    "todo": "./dist/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "keywords": [
+    "CLI-Todo",
+    "npmtool",
+    "cli-based-todo-manager"
+  ],
+  "author": "AmitKYs",
   "license": "ISC",
+  "repository": "https://github.com/Amitkys/todo-cli",
+  "homepage": "https://github.com/Amitkys/todo-cli#readme",
   "description": "",
   "dependencies": {
     "@types/commander": "^2.12.5",
