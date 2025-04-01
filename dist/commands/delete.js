@@ -18,11 +18,13 @@ const chalk_1 = __importDefault(require("chalk"));
 function deleteTask(id) {
     return __awaiter(this, void 0, void 0, function* () {
         const db = yield (0, db_1.getDb)();
-        const taskIndex = db.tasks.findIndex((t) => t.id == id);
-        if (taskIndex !== -1) {
+        const task = db.tasks.find((t) => t.id === id);
+        if (task) {
+            // Task found, remove it from the array
+            const taskIndex = db.tasks.indexOf(task);
             db.tasks.splice(taskIndex, 1); // Remove task by index
             yield (0, db_1.saveDb)(db);
-            console.log(chalk_1.default.red(`Task with ID ${id} has been deleted.`));
+            console.log(chalk_1.default.red(`Task "${task.task}" has been deleted.`)); // Display task name
         }
         else {
             console.log(chalk_1.default.red("Task not found!"));
